@@ -2,15 +2,17 @@
 
 namespace Belajar\PHP\MVC\Controller;
 
+use Belajar\PHP\MVC\App\View;
+
 class HomeController
 {
     public function index(): void
     {
-        $model = [
+        $data = [
             "title" => "Belajar PHP MVC",
             "content" => "Selamat belajar PHP MVC dari Programmer Zaman Now"
         ];
-        echo "HomeController.index()";
+        View::render('/home/index', $data);
     }
 
     public function hello(): void
